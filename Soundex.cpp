@@ -2,13 +2,18 @@
 #include <cctype>
 #include "Soundex.h"
 
-void generateSoundex(const char* input, char* soundex)
+void checkIfNull(const char *name, char *soundex)
 {
-  if (input[0] == '\0')
+    if (name[0] == '\0')
     {
         soundex[0] = '\0';
         return;
     }
+}
+
+void generateSoundex(const char* input, char* soundex)
+{
+  checkIfNull(input,soundex);
 
   for(int index = 0; index< strlen(input);index++)
     {
