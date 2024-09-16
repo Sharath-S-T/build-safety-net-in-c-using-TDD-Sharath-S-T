@@ -3,3 +3,4 @@
 
 void generateSoundex(const char* input, char* soundex);
 
+#endif // SOUNDEX_H
