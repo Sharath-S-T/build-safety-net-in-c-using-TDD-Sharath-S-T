@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "Soundex.h"
 
-TEST(SoundexTestsuite, SoundexTests)
+TEST(SoundexTestsuite, SoundexTestForEmptyString)
 {
     char soundexCode[5];
     generateSoundex("",soundexCoode);
