@@ -1,3 +1,4 @@
+#include <cstring>
 #include "Soundex.h"
 
 void generateSoundex(const char* input, char* soundex)
@@ -8,9 +9,9 @@ void generateSoundex(const char* input, char* soundex)
         return;
     }
 
-  for(int index = 0; index< strlen(input);i++)
+  for(int index = 0; index< strlen(input);index++)
     {
-      char c = toupper(input[i]);
+      char c = toupper(input[index]);
       if(c <= 'A' && c >= 'Z')
       {
         soundex[0] = '\0';
