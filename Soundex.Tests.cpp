@@ -4,6 +4,6 @@
 TEST(SoundexTestsuite, SoundexTestForEmptyString)
 {
     char soundexCode[5];
-    generateSoundex("",soundexCoode);
+    generateSoundex("",soundexCode);
     ASSERT_STREQ(soundexCode,"");
 }
