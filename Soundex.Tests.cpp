@@ -19,4 +19,8 @@ TEST(SoundexTestsuite, SoundexTestForEmptyString)
     //Alphabetic consonant characters
     generateSoundex("xyzc",soundexCode);
     ASSERT_STREQ(soundexCode,"X200");
+
+    //Alphabetic vowel characters
+    generateSoundex("aeiou",soundexCode);
+    ASSERT_STREQ(soundexCode,"X200");
 }
