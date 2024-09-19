@@ -22,5 +22,5 @@ TEST(SoundexTestsuite, SoundexTestForEmptyString)
 
     //Alphabetic vowel characters
     generateSoundex("aeiou",soundexCode);
-    ASSERT_STREQ(soundexCode,"X200");
+    ASSERT_STREQ(soundexCode,"A000");
 }
