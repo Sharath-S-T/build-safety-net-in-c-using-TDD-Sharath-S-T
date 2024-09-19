@@ -23,4 +23,8 @@ TEST(SoundexTestsuite, SoundexTestForEmptyString)
     //Alphabetic vowel characters
     generateSoundex("aeiou",soundexCode);
     ASSERT_STREQ(soundexCode,"A000");
+
+    //Alphabetic characters with other characters
+    generateSoundex("rfi1@44xg",soundexCode);
+    ASSERT_STREQ(soundexCode,"R120");
 }
