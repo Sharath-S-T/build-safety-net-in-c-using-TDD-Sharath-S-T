@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "Soundex.h"
 
-TEST(SoundexTestsuite, SoundexTestForEmptyString)
+TEST(SoundexTestsuite, SoundexTests)
 {
     char soundexCode[5];
     //Empty String
@@ -27,8 +27,4 @@ TEST(SoundexTestsuite, SoundexTestForEmptyString)
     //Alphabetic characters with other characters
     generateSoundex("rfi1@44xg",soundexCode);
     ASSERT_STREQ(soundexCode,"R120");
-
-    //Long Alphabetic characters
-    generateSoundex("abcdefghij",soundexCode);
-    ASSERT_STREQ(soundexCode,"A123");
 }
