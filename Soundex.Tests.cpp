@@ -27,4 +27,8 @@ TEST(SoundexTestsuite, SoundexTestForEmptyString)
     //Alphabetic characters with other characters
     generateSoundex("rfi1@44xg",soundexCode);
     ASSERT_STREQ(soundexCode,"R120");
+
+    //Long Alphabetic characters
+    generateSoundex("abcdefghijklmnopqrstuvwz",soundexCode);
+    ASSERT_STREQ(soundexCode,"A123");
 }
