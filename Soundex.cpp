@@ -43,7 +43,7 @@ void processEachChar(const char* input, char* soundex , int* sIndex,int index)
 
 void processChars(const char* input,char* soundex,int* sIndex,int inputLength)
 {
-  for(int index = 1; index < inputLength ; index ++)
+  for(int index = 1; index < inputLength && *sIndex < 4; index ++)
   {
     processEachChar(input,soundex,sIndex,index);
   }
