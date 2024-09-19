@@ -46,7 +46,7 @@ void processChars(const char* input,char* soundex,int* sIndex,int inputLength)
 }
 
 void generateSoundex(const char* input, char* soundex)
-{-
+{
     int sIndex = 0;
     int inputLength = strlen(input);
     checkIfNull(input,soundex);
