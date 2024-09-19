@@ -11,16 +11,32 @@ void checkIfNull(const char *name, char *soundex)
     }
 }
 
+char getSoundexCode(char c)
+{
+    char c = toupper(c);
+    if(c <= 'A' && c >= 'Z')
+    {
+      return ;
+    }
+}
+
+void processRemaniningChars(const char* input)
+{
+    for(int index = 0; index< strlen(input);index++)
+    {
+      getSoundexCode(input[index]);
+    }
+}
+
+
+void initializeSoundex(char firstChar, char *soundex)
+{
+    soundex[0] = toupper(firstChar);
+}
+
 void generateSoundex(const char* input, char* soundex)
 {
   checkIfNull(input,soundex);
-
-  for(int index = 0; index< strlen(input);index++)
-    {
-      char c = toupper(input[index]);
-      if(c <= 'A' && c >= 'Z')
-      {
-        return ;
-      }
-    }
+  initializeSoundex(name[0],soundex);
+  processRemaniningChars(input);
 }
