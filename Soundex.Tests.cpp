@@ -29,6 +29,6 @@ TEST(SoundexTestsuite, SoundexTests)
     ASSERT_STREQ(soundexCode,"R120");
 
     //Long Alphabetic characters
-    generateSoundex("abcdfghi",soundexCode);
+    generateSoundex("abcdglouiugrydddytcfghi",soundexCode);
     ASSERT_STREQ(soundexCode,"A123");
 }
