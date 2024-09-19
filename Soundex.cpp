@@ -32,18 +32,25 @@ char getSoundexCode(char c)
     return (c >= 'A' && c <= 'Z') ? code[c - 'A'] : '0';
 }
 
-void processChars(const char* input,char* soundex,int* sIndex,int inputLength)
+void processEachChar(const char* input, char* soundex , int* sIndex,int index)
 {
-  for(int index = 1; index < inputLength ; index ++)
-  {
     char code = getSoundexCode(input[index]);
     if(code != '\0' && soundex[index-1]!= code)
     {
       soundex[(*sIndex)++] = code;
     }
+}
+
+void processChars(const char* input,char* soundex,int* sIndex,int inputLength)
+{
+  for(int index = 1; index < inputLength ; index ++)
+  {
+    processEachChar(input,soundex,sIndex,index);
   }
   padSoundex(soundex,sIndex);
 }
+
+
 
 void generateSoundex(const char* input, char* soundex)
 {
