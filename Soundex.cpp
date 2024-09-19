@@ -42,11 +42,11 @@ void processChars(const char* input,char* soundex,int* sIndex,int inputLength)
       soundex[(*sIndex)++] = code;
     }
   }
-  padSoundex(soundex,&sIndex);
+  padSoundex(soundex,sIndex);
 }
 
 void generateSoundex(const char* input, char* soundex)
-{
+{-
     int sIndex = 0;
     int inputLength = strlen(input);
     checkIfNull(input,soundex);
