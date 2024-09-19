@@ -8,7 +8,7 @@ TEST(SoundexTestsuite, SoundexTestForEmptyString)
     generateSoundex("",soundexCode);
     ASSERT_STREQ(soundexCode,"");
 
-    //non alphabetic single character
-    generateSoundex("1",soundexCode);
-    ASSERT_STREQ(soundexCode,"");
+    //Alphabetic single character
+    generateSoundex("a",soundexCode);
+    ASSERT_STREQ(soundexCode,"A000");
 }
