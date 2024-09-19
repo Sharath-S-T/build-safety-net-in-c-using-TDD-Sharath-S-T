@@ -35,7 +35,7 @@ char getSoundexCode(char c)
 void processEachChar(const char* input, char* soundex , int* sIndex,int index)
 {
     char code = getSoundexCode(input[index]);
-    if(code != '\0' && soundex[(*sIndex)-1]!= code)
+    if(code != '0' && soundex[(*sIndex)-1]!= code)
     {
       soundex[(*sIndex)++] = code;
     }
