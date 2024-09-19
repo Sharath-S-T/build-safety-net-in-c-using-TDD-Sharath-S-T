@@ -1,6 +1,5 @@
 #include <cstring>
 #include <cctype>
-#include "Soundex.h"
 
 void checkIfNull(const char *name, char *soundex)
 {
@@ -13,10 +12,10 @@ void checkIfNull(const char *name, char *soundex)
 
 char getSoundexCode(char c)
 {
-    char c = toupper(c);
+    c = toupper(c);
     if(c <= 'A' && c >= 'Z')
     {
-      return ;
+      return '\0';
     }
 }
 
@@ -37,6 +36,6 @@ void initializeSoundex(char firstChar, char *soundex)
 void generateSoundex(const char* input, char* soundex)
 {
   checkIfNull(input,soundex);
-  initializeSoundex(name[0],soundex);
+  initializeSoundex(input[0],soundex);
   processRemaniningChars(input);
 }
