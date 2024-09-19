@@ -11,4 +11,8 @@ TEST(SoundexTestsuite, SoundexTestForEmptyString)
     //Alphabetic single character
     generateSoundex("a",soundexCode);
     ASSERT_STREQ(soundexCode,"A000");
+
+    //Non Alphabetic single character
+    generateSoundex("1",soundexCode);
+    ASSERT_STREQ(soundexCode,"1000");
 }
